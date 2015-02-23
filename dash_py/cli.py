@@ -47,11 +47,12 @@ def install(name):
         if '//' in name:
             url = name
         else:
-            url = "https://raw.github.com/whtsky/Dash.py/" \
+            url = "https://raw.githubusercontent.com/drfill/Dash.py/" \
                   "master/dash_py/packages/%s.yaml" % name
         if resource_exist(url):
             r = requests.get(url)
-            content = r.content
+            if r.status_code == 200:
+                content = r.content
 
     if content:
         package = yaml.load(content)

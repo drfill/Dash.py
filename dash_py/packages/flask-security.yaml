@@ -1,0 +1,6 @@
+name: Flask-Security
+type: sphinx
+format: git
+url: https://github.com/mattupstate/flask-security.git
+sphinx_doc_path: docs
+icon: _static/logo-helmet.png

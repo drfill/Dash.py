@@ -1,0 +1,6 @@
+name: Flask-Mail
+type: sphinx
+format: git
+url: https://github.com/mattupstate/flask-mail.git
+sphinx_doc_path: docs
+icon: _static/flask-mail.png

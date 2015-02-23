@@ -1,0 +1,6 @@
+name: Flask-Admin
+type: sphinx
+format: git
+url: https://github.com/mrjoes/flask-admin.git
+sphinx_doc_path: doc
+icon: _static/logo.png

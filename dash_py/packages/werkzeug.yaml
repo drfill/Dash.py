@@ -1,5 +1,6 @@
 name: Werkzeug
-type: html
-format: zip
-url: http://werkzeug.pocoo.org/docs/werkzeug-docs.zip
+type: sphinx
+format: git
+url: https://github.com/mitsuhiko/werkzeug.git
+sphinx_doc_path: docs
 icon: _static/werkzeug.png

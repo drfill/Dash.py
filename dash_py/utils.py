@@ -46,7 +46,7 @@ def resource_exist(url):
         return False
 
 
-def call(command, silence=True, **kwargs):
+def call(command, silence=False, **kwargs):
     if silence:
         kwargs["stderr"] = subprocess.PIPE
         kwargs["stdout"] = subprocess.PIPE
@@ -64,6 +64,8 @@ def download_and_extract(package, extract_path):
         if not call("git clone %s %s" % (url, extract_path)):
             logger.error("Can't clone package %s" % name)
             sys.exit(5)
+        if os.path.exists(os.path.join(extract_path, '.gitmodules')):
+            call("cd %s && git submodule update --init --recursive" % extract_path)
         return
     elif format == 'hg':
         logger.info("Cloning package %s" % name)
